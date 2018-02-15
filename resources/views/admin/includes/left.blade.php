@@ -11,8 +11,15 @@
             <ul>
                 <li class="{{ Request::path() == 'users' ? 'active' : '' }}"><a href="{{ url('users') }}">User List</a></li>
             </ul>
+        </li>
+        <li class="{{ Request::segment(1)=='events' ? 'active' : '' }}">
+            <a href="#"><i class="fa fa-user"></i> <span>Event Management</span></a>
+            <ul>
+                <li class="{{ Request::segment(1).'/'.Request::segment(2)=='events/create' ? 'active' : '' }}"><a href="{{ url('events/create') }}">Create Event</a></li>
+                <li class="{{ Request::path() == 'events' ? 'active' : '' }}{{ Request::segment(1).'/'.Request::segment(2)=='events/edit' ? 'active' : '' }}"><a href="{{ url('events') }}">Update/Delete Event</a></li>
+            </ul>
         </li>                        
-        <li>
+        <!-- <li>
             <a href="#"><i class="fa fa-file-o"></i> <span>Pages</span></a>
             <ul>
                 <li>
@@ -127,9 +134,9 @@
                 </li>
                 <li><a href="#">Second Level</a></li>
             </ul>
-        </li>
+        </li> -->
         <li><a href="{{ url('logout') }}"><i class="fa fa-code-fork"></i> <span>Logout</span></a></li>
     </ul>
     
 </div>
-<!-- ./page sidebar -->
+<!-- ./page sidebar  -->
