@@ -39,7 +39,8 @@ class LoginController extends Controller
         if(isset($user) && !($user->accountLocked)) {
             return redirect()->intended('dashboard');
         } else {
-            Session::flush();
+            //Session::flush();
+            Session::forget('user');
             return view('admin.login');
         }
         
