@@ -3,8 +3,8 @@
 @section('content')
 <!-- page title -->
 <div class="page-title">
-    <h1>Sortable Tables</h1>
-    <p>Sortable features for default tables</p>
+    <h1>User List</h1>
+    <p>List of registered users in the Easymeet</p>
     
     <ul class="breadcrumb">
         <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
