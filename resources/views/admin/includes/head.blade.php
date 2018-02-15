@@ -11,7 +11,10 @@
 <!-- ./meta section -->
 
 <!-- css styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/blue-white.css') }}" id="dev-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
 <!-- ./css styles -->                                     
 @yield('styles')
 <!--[if lte IE 9]>

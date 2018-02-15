@@ -3,8 +3,14 @@
     
     <ul class="dev-page-navigation">
         <li class="title">Navigation</li>
-        <li class="active">
-            <a href="index.html"><i class="fa fa-desktop"></i> <span>Dashboard</span></a>
+        <li class="{{ Request::path() == 'dashboard' ? 'active' : '' }}">
+            <a href="{{ url('dashboard') }}"><i class="fa fa-desktop"></i> <span>Dashboard</span></a>
+        </li>
+        <li class="{{ Request::path() == 'users' ? 'active' : '' }}">
+            <a href="#"><i class="fa fa-user"></i> <span>User Management</span></a>
+            <ul>
+                <li class="{{ Request::path() == 'users' ? 'active' : '' }}"><a href="{{ url('users') }}">User List</a></li>
+            </ul>
         </li>                        
         <li>
             <a href="#"><i class="fa fa-file-o"></i> <span>Pages</span></a>
@@ -122,6 +128,7 @@
                 <li><a href="#">Second Level</a></li>
             </ul>
         </li>
+        <li><a href="{{ url('logout') }}"><i class="fa fa-code-fork"></i> <span>Logout</span></a></li>
     </ul>
     
 </div>

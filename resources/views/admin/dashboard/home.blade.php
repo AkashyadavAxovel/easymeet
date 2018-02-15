@@ -3,7 +3,7 @@
 @section('content')
 <div class="row row-condensed">
     <div class="col-lg-12 col-md-12">
-        
+        @include('admin.notification')
         <div class="wrapper">
             <div class="page-subtitle">
                 <h2>Summary profit</h2>
