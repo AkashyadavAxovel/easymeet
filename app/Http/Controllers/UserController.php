@@ -49,13 +49,12 @@ class UserController extends Controller
             try {
                 $storage = self::$storageService->findAllDocuments(env('APP42_DBNAME'),self::$collectionName);
                 $jsonDocList = $storage->getJsonDocList();
-                $pageTitle = 'Banners- Admin';
+                $pageTitle = 'Users- Admin';
                 return view('admin.users.index', compact("pageTitle", "jsonDocList"));
             } catch (\Exception $e) {
                 return back()->withErrors(['warning' => $e->getMessage()]);
             }
         } else {
-            //Session::flush();
             Session::forget('user');
             return redirect()->intended('login');
         }
